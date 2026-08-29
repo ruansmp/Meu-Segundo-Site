@@ -299,10 +299,9 @@ h1, h2, h3, .destaque, .logo {
 /* Alinha os 3 cards perfeitamente lado a lado */
 .container-cards {
     display: flex;
-    justify-content: space-between;
+   flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
-    margin: auto;
-   padding: 8%;
 }
 
 .card {
@@ -310,7 +309,8 @@ h1, h2, h3, .destaque, .logo {
     border: 1px solid #222;
     padding: 35px 25px;
     border-radius: 8px;
-    flex: 1; /* Faz todos os 3 cards terem exatamente o mesmo tamanho */
+    flex: 1 1 300px;
+    max-width: 100%; /* Faz todos os 3 cards terem exatamente o mesmo tamanho */
     transition: 0.4s ease;
 }
 
@@ -318,6 +318,8 @@ h1, h2, h3, .destaque, .logo {
     font-size: 22px;
     color: #ffcc00;
     margin-bottom: 15px;
+    flex: 1 1 300px;
+    max-width: 100%;
 }
 
 .card p {
