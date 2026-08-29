@@ -1,18 +1,24 @@
 /* ==========================================================================
    CONFIGURAÇÕES GERAIS E RESET
    ========================================================================== */
-* {
+
+*, *::before, *::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth; /* Faz a tela deslizar suavemente ao clicar no menu */
 }
 
-body {
+body, html{
     font-family: 'Poppins', sans-serif;
     background-color: #0d0d13; /* Fundo quase preto, bem sombrio */
     color: #e2e2e9;            /* Texto claro com bom contraste */
     line-height: 1.6;
+    max-width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 /* Estilo para títulos com pegada mais medieval/mágica */
@@ -43,7 +49,6 @@ img {
     padding: 20px 8%;
     z-index: 1000; /* Garante que o menu fique sempre por cima de tudo */
 }
-
 @media (max-width: 768px) {
     .navbar {
         flex-direction: row;
@@ -55,22 +60,28 @@ img {
 }
 
 .logo {
+    gap: 12px;
+    display: flex;
     font-size: 24px;
     font-weight: 900;
     margin-left: 15px;
     color: #ff3344;
     text-shadow: 0 0 10px rgba(255, 51, 68, 0.3);
+    align-items: center;
 }
-
+.logo-text{
+    white-space: nowrap;
+    display: inline;
+}
 .logo-imagem {
     position: absolute;
+    max-height: 40px;
     top: 20px;
     left: 10px;
     object-fit: scale-down;
     justify-content: space-between;
     align-items: center;
-    width: 08%;
-    height: 50%;
+    width: auto;
     z-index: 1001; /* Garante que o menu fique sempre por cima de tudo */
 }
 
@@ -211,15 +222,23 @@ img {
     align-items: center;
     object-fit: cover; /* Faz a imagem caber na caixa sem distorcer */
     border-radius: 8px;
+     transition: 0.4s ease; /* Transição suave para o efeito de hover */
 }
 
+.reino-clover{
+     gap: 20px; /* Espaço entre o texto e a imagem */
+    align-items: center;
+    margin-top: 60px;
+  transition: 0.4s ease; /* Transição suave para o efeito de hover */
+  will-change: transform; /* Indica que a transformação será alterada */
+  backface-visibility: hidden; /* Evita que a parte de trás do elemento seja visível durante a transformação */
+}
 .reino-clover img{
     display: block;
     width: 100%;
     height: auto;
     object-fit: cover; /* Faz a imagem caber na caixa sem distorcer */
     border-radius: 8px;
-    transition: 0.4s ease; /* Transição suave para o efeito de hover */
 }
 
 .reino-clover:hover{
@@ -230,6 +249,9 @@ img {
     gap: 20px; /* Espaço entre o texto e a imagem */
     align-items: center;
     margin-top: 60px;
+  transition: 0.4s ease; /* Transição suave para o efeito de hover */
+  will-change: transform; /* Indica que a transformação será alterada */
+  backface-visibility: hidden; /* Evita que a parte de trás do elemento seja visível durante a transformação */
 }
 
 .grimorio {
@@ -242,17 +264,27 @@ img {
     line-height: 1.8;
 }
 
+.foto-grimorio {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    object-fit: cover; /* Faz a imagem caber na caixa sem distorcer */
+    border-radius: 10px;
+     transition: 0.4s ease; /* Transição suave para o efeito de hover */
+      border: 2px solid #222; /* Adiciona uma borda sutil para destacar a imagem */
+    overflow: hidden; /* Garante que nada "vaze" da borda arredondada */
+}
+
 .foto-grimorio img{
     width: 100%;
     height: auto;
     align-items: center;
     object-fit: cover; /* Faz a imagem caber na caixa sem distorcer */
     border-radius: 8px;
-    transition: 0.4s ease; /* Transição suave para o efeito de hover */
 }
 
 .foto-grimorio:hover {
-    transform: scale(1.02); /* Leve zoom ao passar o mouse */
+  transform: scale(1.02); /* Leve zoom ao passar o mouse */
 }
 
 /* ==========================================================================
