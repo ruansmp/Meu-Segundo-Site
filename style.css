@@ -28,11 +28,6 @@ h1, h2, h3, .destaque, .logo {
     letter-spacing: 1px;
 }
 
-img {
-    display: block;
-    max-width: 100%;
-}
-
 /* ==========================================================================
    1. CABEÇALHO (NAVBAR)
    ========================================================================== */
@@ -47,12 +42,11 @@ img {
     justify-content: space-between; /* Separa a logo dos links */
     align-items: center;
     padding: 20px 8%;
-    z-index: 1000; /* Garante que o menu fique sempre por cima de tudo */
+    z-index: 100; /* Garante que o menu fique sempre por cima de tudo */
 }
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
-       align-items: center;
+        flex-direction: row;
         padding: 15px 5%;
     }
     .navbar nav a {
@@ -160,15 +154,8 @@ img {
 /* ==========================================================================
    3. SEÇÃO SOBRE / HISTÓRIA (TEXTO + IMAGEM)
    ========================================================================== */
-
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px; /* Bordas arredondadas para um visual mais suave */
-    display: block;
-}
 .secao-historia {
-    padding: 150px 0%;
+    padding: 100px 0%;
     background-color: #12121a; /* Alterna o tom de fundo para dar ritmo */
     flex-wrap: wrap;
 }
@@ -215,6 +202,7 @@ img {
 
 .caixa-imagem {
     gap: 10px; /* Espaço entre as duas imagens */
+    padding: 8%;
 }
 
 .caixa-imagem img {
@@ -227,12 +215,13 @@ img {
 }
 
 .reino-clover{
-     gap: 20px; /* Espaço entre o texto e a imagem */
+    width: auto;
+    height: 100%;
     align-items: center;
-    margin-top: 60px;
-  transition: 0.4s ease; /* Transição suave para o efeito de hover */
-  will-change: transform; /* Indica que a transformação será alterada */
-  backface-visibility: hidden; /* Evita que a parte de trás do elemento seja visível durante a transformação */
+    object-fit: cover; /* Faz a imagem caber na caixa sem distorcer */
+    border-radius: 10px;
+     transition: 0.4s ease; /* Transição suave para o efeito de hover */
+    overflow: hidden; /* Garante que nada "vaze" da borda arredondada */
 }
 .reino-clover img{
     display: block;
@@ -260,19 +249,19 @@ img {
     font-size: 20px;
     font-weight: bold;
     color: #cdcdff;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 100px;
     line-height: 1.8;
 }
 
 .foto-grimorio {
-    width: 100%;
+    margin: auto;
+    width: 85%;
     height: auto;
     align-items: center;
     object-fit: cover; /* Faz a imagem caber na caixa sem distorcer */
-    border-radius: 10px;
+    border-radius: 8px;
      transition: 0.4s ease; /* Transição suave para o efeito de hover */
-      border: 2px solid #222; /* Adiciona uma borda sutil para destacar a imagem */
     overflow: hidden; /* Garante que nada "vaze" da borda arredondada */
 }
 
@@ -281,7 +270,7 @@ img {
     height: auto;
     align-items: center;
     object-fit: cover; /* Faz a imagem caber na caixa sem distorcer */
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
 .foto-grimorio:hover {
@@ -292,9 +281,9 @@ img {
    4. SEÇÃO DOS CARDS (ESQUADRÕES)
    ========================================================================== */
 .secao-esquadroes {
-    padding: 100px 8%;
+    padding: 100px 20%;
     text-align: center;
-   background-color: #0d0d13;
+    background-color: #0d0d13;
 }
 
 .secao-esquadroes h2 {
@@ -348,6 +337,9 @@ img {
     margin-top: 0;
     padding: 100px 8%;
     text-align: center;
+    background-color: #0b0b0e;
+
+
    }
 
    .secao-contatos h2 {
