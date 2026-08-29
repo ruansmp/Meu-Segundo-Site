@@ -301,6 +301,7 @@ h1, h2, h3, .destaque, .logo {
     display: flex;
     justify-content: space-between;
     gap: 30px;
+    margin: auto;
 }
 
 .card {
