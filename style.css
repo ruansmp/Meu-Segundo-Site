@@ -297,7 +297,10 @@ h1, h2, h3, .destaque, .logo {
 }
 
 /* Alinha os 3 cards perfeitamente lado a lado */
+@media (max-width: 768px) {
 .container-cards {
+   flex-direction: column;
+   align-items: center;
     display: flex;
    flex-wrap: wrap;
     justify-content: center;
@@ -311,9 +314,10 @@ h1, h2, h3, .destaque, .logo {
     border-radius: 8px;
     flex: 1 1 300px;
     max-width: 100%; /* Faz todos os 3 cards terem exatamente o mesmo tamanho */
+   width: 90%;
     transition: 0.4s ease;
 }
-
+}
 .card h3 {
     font-size: 22px;
     color: #ffcc00;
