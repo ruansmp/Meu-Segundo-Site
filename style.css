@@ -37,7 +37,7 @@ img {
     background-color: rgba(13, 13, 19, 0.95); /* Fundo semi-transparente */
     border-bottom: 2px solid #ff3344;         /* Linha vermelha fina na borda */
     display: flex;
-    flex-direction: row
+    flex-direction: row;
     justify-content: space-between; /* Separa a logo dos links */
     align-items: center;
     padding: 20px 8%;
