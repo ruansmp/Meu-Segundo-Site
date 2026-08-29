@@ -91,7 +91,7 @@ img {
    2. SEÇÃO HERO (DESTAQUE DE ENTRADA)
    ========================================================================== */
 .secao-hero {
-    height: 100vh; /* Ocupa 100% da altura da tela do computador */
+    height: 100%; /* Ocupa 100% da altura da tela do computador */
     display: flex;
     justify-content: center;
     align-items: center;
