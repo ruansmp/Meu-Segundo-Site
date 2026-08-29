@@ -168,7 +168,7 @@ img {
     display: block;
 }
 .secao-historia {
-    padding: 150px 8%;
+    padding: 150px 0%;
     background-color: #12121a; /* Alterna o tom de fundo para dar ritmo */
     flex-wrap: wrap;
 }
