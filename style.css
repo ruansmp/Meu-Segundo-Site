@@ -37,10 +37,21 @@ img {
     background-color: rgba(13, 13, 19, 0.95); /* Fundo semi-transparente */
     border-bottom: 2px solid #ff3344;         /* Linha vermelha fina na borda */
     display: flex;
+    flex-direction: row
     justify-content: space-between; /* Separa a logo dos links */
     align-items: center;
     padding: 20px 8%;
     z-index: 1000; /* Garante que o menu fique sempre por cima de tudo */
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        padding: 15px 5%;
+    }
+    .navbar nav a {
+        margin: 10px 0; /* Espaçamento entre os links na versão mobile */
+    }
 }
 
 .logo {
